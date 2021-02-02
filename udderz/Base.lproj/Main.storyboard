@@ -41,23 +41,25 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swd-kz-J0R" userLabel="Middle View">
                                         <rect key="frame" x="0.0" y="299" width="414" height="298"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Please Enter the address here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6y-tz-erR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter the address here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6y-tz-erR">
                                                 <rect key="frame" x="93.5" y="139" width="227.5" height="20.5"/>
                                                 <color key="backgroundColor" red="1" green="0.46582753490000001" blue="0.31297419659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M3B-t3-sYB">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M3B-t3-sYB">
                                                 <rect key="frame" x="191" y="189.5" width="32" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="j6y-tz-erR" firstAttribute="centerY" secondItem="swd-kz-J0R" secondAttribute="centerY" id="ARk-Jv-39o"/>
+                                            <constraint firstItem="M3B-t3-sYB" firstAttribute="top" secondItem="j6y-tz-erR" secondAttribute="bottom" constant="30" id="Dtl-FB-7uQ"/>
                                             <constraint firstItem="M3B-t3-sYB" firstAttribute="centerX" secondItem="swd-kz-J0R" secondAttribute="centerX" id="Md0-pY-VdA"/>
-                                            <constraint firstItem="M3B-t3-sYB" firstAttribute="top" secondItem="j6y-tz-erR" secondAttribute="bottom" constant="30" id="Rd6-A2-y2l"/>
                                             <constraint firstItem="j6y-tz-erR" firstAttribute="centerX" secondItem="swd-kz-J0R" secondAttribute="centerX" id="Xu0-vz-NOC"/>
+                                            <constraint firstItem="M3B-t3-sYB" firstAttribute="centerY" secondItem="swd-kz-J0R" secondAttribute="centerY" id="ddj-h1-SfG"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DlM-tW-c8E" userLabel="Bottom View">
@@ -67,6 +69,9 @@
                                                 <rect key="frame" x="134.5" y="134" width="145" height="30"/>
                                                 <color key="backgroundColor" red="1" green="0.46582753490000001" blue="0.31297419659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Click here to get milk"/>
+                                                <connections>
+                                                    <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1I7-GS-JqO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
